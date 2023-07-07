@@ -25,6 +25,12 @@
         margin: auto;
         display: flex;
     }
+    .col-1{
+        width: calc((100% / 12) * 1);
+    }
+    .col-10{
+        width: calc((100% / 12) * 10);
+    }
     .col-4{
         width: calc((100% / 12) * 4);
         height: 100%;
@@ -66,7 +72,7 @@
     }
     .message{
         padding: 15px 18px;
-        border-radius: 7px;
+        border-radius: 8px;
         width: 300px;
         display: inline-flex;
         justify-content: space-between;
@@ -163,4 +169,18 @@
 */
 #r-aside #writing-box{
     height: 60px;
+    justify-content: space-around;
+}
+#r-aside #writing-box .col-1{
+    line-height: 60px;
+    justify-content: center;
+    align-items: center;
+}
+#r-aside #writing-box .col-10 > div{
+    background-color: white;
+    padding: 12px 12px;
+    border-radius: 8px;
+}
+#r-aside #writing-box .col-10{
+    padding: 10px 0;
 }
