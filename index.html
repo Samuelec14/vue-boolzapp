@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Boolzap</title>
 
         <!-- FONT  AWESOME -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,7 +19,7 @@
 
     </head>
     
-    <body class="debug">
+    <body>
 
         <div id="app" class="background">
             
@@ -30,11 +30,26 @@
 
                     <header class="navbar border">
 
-                        <div>Utente</div>
-                        <div>
+                        <div class="flex-container gray-bg">
+
+                            <div id="io" class="col-6 flex-container">
+                                <img src="img/avatar_io.jpg" alt="avatar_io" class="avatar">
+                                <span class="text-bald">Sofia</span>
+                            </div>
+
+                            <div class="col-6 flex-container">
+                                <i class="fa-solid fa-circle-notch"></i>
+                                <i class="fa-solid fa-message"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+
+
+                        </div>
+
+                        <div style="background-color: rgb(142, 218, 252);">
                             notifiche
                         </div>
-                        <div>
+                        <div style="background-color: rgb(250, 250, 250);">
                             searchbar
                         </div>
 
@@ -42,16 +57,16 @@
 
                     <section class="contact-list border white-bg">
 
-                        <div class="contact-card flex-container">
+                        <div class="contact-card flex-container" v-for="singleContact in contacts">
                             
-                            <img src="img/avatar_1.jpg" alt="" class="avatar">
+                            <img  class="avatar" :src="singleContact.avatar" alt="">
                             
                             <span>
-                                <span class="text-bald">Michele</span>
+                                <span class="text-bald">{{singleContact.name}}</span>
                                 <div class="text-small">Ultimo messaggio inviato</div>
                             </span>
-
                         </div>
+
                     </section>
 
                 </aside>

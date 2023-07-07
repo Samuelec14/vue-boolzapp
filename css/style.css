@@ -100,22 +100,36 @@
     }
 
 
-/* ASIDE  navbar
+/* LEFT ASIDE  navbar
 */
     .background .container > .flex-container{
         flex-direction: column;
+        border-right: 1px solid lightgray;
     }
-    aside .navbar div:first-child{
+    aside .navbar > div{
+        padding: 8px 7px;
+    }
+    aside .navbar > div div:first-child{
+        text-align: end;
+    }
+    aside .navbar > div div:last-child{
+        vertical-align: middle;
+    }
+    aside .navbar #io .avatar {
+        margin-right: 15px;
+        width: 22%;
+    }
+
+
+    aside .navbar > div:first-child{
         height: 60px;
-        /* debug */
-        background-color: beige;
     }
-    aside .navbar div:nth-child(2){
+    aside .navbar > div:nth-child(2){
         height: 4.375rem;
         background-color: rgb(226, 226, 142);
 
     }
-    aside .navbar div:last-child{
+    aside .navbar > div:last-child{
         height: 40px;
         background-color: rgb(229, 229, 81);
     }
@@ -125,6 +139,8 @@
     aside .contact-list{
         height: calc(100% - 170px);
         width: 100%;
+
+        overflow-y: auto;
     }
     aside .contact-list h4{
         display: inline-block;
