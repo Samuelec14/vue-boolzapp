@@ -57,7 +57,7 @@
 
                     <section class="contact-list border white-bg">
 
-                        <div class="contact-card flex-container" v-for="singleContact in contacts">
+                        <div @click="test" class="contact-card flex-container" v-for="singleContact in contacts" >
                             
                             <img  class="avatar" :src="singleContact.avatar" alt="">
                             

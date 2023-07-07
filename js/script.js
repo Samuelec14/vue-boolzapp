@@ -169,6 +169,8 @@ createApp({
         }
     },
     methods: {
-        
+        test(){
+            console.log('card cliccata')
+        }
     }
 }).mount('#app');
