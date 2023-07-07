@@ -16,6 +16,8 @@
         width: 100%;
         height: 100vh;
         padding: 2rem 0;
+        background: rgb(218,219,211);
+        background: linear-gradient(0deg, rgba(218,219,211,1) 78%, rgba(0,150,136,1) 78%);
     }
     .container{
         height: 90vh;
@@ -30,8 +32,8 @@
     .col-8{
         width: calc((100% / 12) * 8);
         height: 100%;
-        /* debug */
-        background-color: pink;
+        /* debug
+        background-color: pink; */
     }
     .col-6{
         width: calc((100% / 12) * 6);
@@ -50,6 +52,9 @@
     .white-bg{
         background-color: rgb(253, 253, 253);
     }
+    .gray-bg{
+        background-color: rgb(243, 238, 234);
+    }
     .avatar{
         width: 13%;
         border-radius: 50%;
@@ -59,6 +64,35 @@
         font-size: 22px;
         padding: 0 8px;
     }
+    .message{
+        padding: 15px 18px;
+        border-radius: 7px;
+        width: 300px;
+        display: inline-flex;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 10px;
+    }
+    .msg-rec{
+        text-align: end;
+    }
+    .msg-sent{
+        text-align: start;
+    }
+    .sent{
+        background-color: white;
+    }
+    .received{
+        background-color: #d5f9ba;
+        text-align: start;
+    }
+    .hour{
+        position: absolute;
+        right: 4px;
+        bottom: 4px;
+        font-size: 12px;
+    }
+
 
 /* ASIDE  navbar
 */
@@ -98,8 +132,11 @@
         border-bottom: 1px solid lightgray;
     }
 
-/* RIGHT ASIDE  
-*/
+/* RIGHT ASIDE header
+*/  
+    #r-aside{
+        height: 100%;
+    }
     #r-aside header{
         height: 60px;
         padding: 8px 7px;
@@ -113,3 +150,17 @@
         display: inline-block;
         line-height:44px ;
     }
+
+/* RIGHT ASIDE  message section
+*/
+    #r-aside #msg-sec{
+        height: calc(100% - 120px);
+        background-image: url(../img/mine.jpg);
+        padding: 35px 45px;
+    }
+
+/* RIGHT ASIDE  writing-box
+*/
+#r-aside #writing-box{
+    height: 60px;
+}
