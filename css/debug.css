@@ -5,3 +5,17 @@
 .debug .container{
     background-color: rebeccapurple;
 }
+.debug aside .navbar{
+    background-color: aquamarine;
+    min-height: 30px;
+    width: 100%;
+}
+.debug aside .contacts{
+    background-color: rgb(38, 165, 125);
+    min-height: 30px;
+    width: 100%;
+}
+.debug .border{
+    border: 1px dashed black;
+}
+
