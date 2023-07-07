@@ -171,6 +171,7 @@ createApp({
     methods: {
         test(){
             console.log('card cliccata')
+            console.log(this.contacts[0].messages[1].message)
         }
     }
 }).mount('#app');
