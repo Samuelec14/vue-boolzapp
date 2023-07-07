@@ -27,14 +27,37 @@
         width: calc((100% / 12) * 4);
         height: 100%;
     }
-    .col-6{
+    .col-8{
         width: calc((100% / 12) * 8);
         height: 100%;
         /* debug */
         background-color: pink;
     }
+    .col-6{
+        width: calc((100% / 12) * 6);
+        height: 100%;
+    }
     .flex-container{
         display: flex;
+    }
+    .text-small{
+        font-size: 14px;
+        color: gray;
+    }
+    .text-bald{
+        font-weight: 550;
+    }
+    .white-bg{
+        background-color: rgb(253, 253, 253);
+    }
+    .avatar{
+        width: 13%;
+        border-radius: 50%;
+    }
+    i{
+        color: gray;
+        font-size: 22px;
+        padding: 0 8px;
     }
 
 /* ASIDE  navbar
@@ -57,7 +80,7 @@
         background-color: rgb(229, 229, 81);
     }
 
-/* ASIDE  contacts
+/*  LEFT ASIDE  contacts
 */
     aside .contact-list{
         height: calc(100% - 170px);
@@ -67,10 +90,26 @@
         display: inline-block;
     }
     aside .contact-list img{
-        width: 12%;
-        border-radius: 50%;
         margin-right: 15px;
     }
     aside .contact-list .contact-card{
         padding: 12px 10px;
+        border-top: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+    }
+
+/* RIGHT ASIDE  
+*/
+    #r-aside header{
+        height: 60px;
+        padding: 8px 7px;
+    }
+    #r-aside header img{
+        width: 10%;
+        margin-right: 15px;
+    }
+    #r-aside header > div:last-child{
+        text-align: right;
+        display: inline-block;
+        line-height:44px ;
     }

@@ -6,7 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
 
-        <!-- FONT  -->
+        <!-- FONT  AWESOME -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         <!-- CSS -->
         <link rel="stylesheet" href="css/style.css">
@@ -39,15 +40,15 @@
 
                     </header>
 
-                    <section class="contact-list border">
+                    <section class="contact-list border white-bg">
 
-                        <div class="contact-card flex-container border">
-
-                            <img src="img/avatar_1.jpg" alt="">
+                        <div class="contact-card flex-container">
+                            
+                            <img src="img/avatar_1.jpg" alt="" class="avatar">
                             
                             <span>
-                                <span>Michele</span>
-                                <div>Ultimo messaggio inviato</div>
+                                <span class="text-bald">Michele</span>
+                                <div class="text-small">Ultimo messaggio inviato</div>
                             </span>
 
                         </div>
@@ -56,24 +57,36 @@
                 </aside>
         
                 <!-- MAIN  -->
-                <main class="col-6">
+                <div class="col-8" id="r-aside">
                     
-                    <!-- SECTION 1 -->
-                    <section>
-        
+                    <header class="white-bg flex-container">
+
+                        <div class="col-6 flex-container">
+                            <img src="img/avatar_1.jpg" alt="" class="avatar">
+                            
+                            <span>
+                                <span class="text-bald">Michele</span>
+                                <div class="text-small">Ultimo accesso</div>
+                            </span>
+                        </div>
+
+                        <div class="col-6 flex-container">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-paperclip"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+
+                    </header>
+
+                    <section class="messages-section">
+
+                    </section>
+                    
+                    <section class="writing-box">
+
                     </section>
         
-                    <!-- SECTION 2 -->
-                    <section>
-                        
-                    </section>
-        
-                    <!-- SECTION 3 -->
-                    <section>
-                        
-                    </section>
-        
-                </main>
+                </div>
 
             </div>
 
