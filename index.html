@@ -105,14 +105,28 @@
                     <!-- RIGHT ASIDE - CONVERSATION SECTION -->
                     <section id="msg-sec">
 
-                        <div class="msg-rec">
-                            <span class="message received flex-container">
-                                <span>Hai portato a spasso il cane?</span>
-                                <span class="hour text-small">15:30</span>
-                            </span>
-                        </div>
+                        <template v-for="singleMessage in contacts[activeContact].messages">
 
-                        <div class="msg-rec">
+                            <div v-if="singleMessage.status == 'received' ">
+                                <div class="msg-rec">
+                                    <span class="message received flex-container">
+                                        <span>{{singleMessage.message}}</span>
+                                        <span class="hour text-small">{{singleMessage.date}}</span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div v-if="singleMessage.status == 'sent' ">
+                                <div class="msg-sent">
+                                    <span class="message sent flex-container">
+                                        <span>{{singleMessage.message}}</span>
+                                        <span class="hour text-small">{{singleMessage.date}}</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </template>
+
+                        <!-- <div class="msg-rec">
                             <span class="message received flex-container">
                                 <span>Ricordati di sitemare i panni</span>
                                 <span class="hour text-small">15:31</span>
@@ -124,7 +138,7 @@
                                 <span>Tutto fatto!</span>
                                 <span class="hour text-small">15:35</span>
                             </span>
-                        </div>
+                        </div> -->
 
                     </section>
                     
