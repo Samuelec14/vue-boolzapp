@@ -5,6 +5,7 @@ createApp({
         return{
             activeContact: 0,
             newMessage:'',
+            filter: '',
             contacts: [
                 {
                 name: 'Michele',
