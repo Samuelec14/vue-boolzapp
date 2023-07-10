@@ -197,6 +197,15 @@ createApp({
                     }, 1000);
                 console.log(this.contacts[this.activeContact].messages)
 
+        },
+        filtered(){
+            for(i = 0; i< this.contacts.length; i++) {
+                this.contacts[i].visible = false;
+
+                if(this.contacts[i].name.includes(this.filter)) {
+                    this.contacts[i].visible = true;
+                }
+            }
         }
     }
 }).mount('#app');

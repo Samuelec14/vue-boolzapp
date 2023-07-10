@@ -57,6 +57,7 @@
                         </div>
                         <div style="background-color: rgb(250, 250, 250);">
                             <input 
+                            @keyup.enter="filtered()"
                             type="text"
                             v-model="filter"
                             placeholder="Cerca un contatto">
@@ -66,14 +67,18 @@
 
                     <section class="contact-list border white-bg">
 
-                        <div @click="test(i)" class="contact-card flex-container" v-for="(singleContact, i) in contacts" >
+                        
+                        <div v-if="contacts.visible === true">
+
+                            <div @click="test(i)" class="contact-card flex-container" v-for="(singleContact, i) in contacts" >
+                                <img  class="avatar" :src="singleContact.avatar" alt="">
+                                
+                                <span>
+                                    <span class="text-bald">{{singleContact.name}}</span>
+                                    <div class="text-small">Ultimo messaggio inviato</div>
+                                </span>
+                            </div>
                             
-                            <img  class="avatar" :src="singleContact.avatar" alt="">
-                            
-                            <span>
-                                <span class="text-bald">{{singleContact.name}}</span>
-                                <div class="text-small">Ultimo messaggio inviato</div>
-                            </span>
                         </div>
 
                     </section>
