@@ -3,7 +3,8 @@ const {createApp} = Vue;
 createApp({
     data() {
         return{
-            activeContact: 3,
+            activeContact: 0,
+            newMessage:'',
             contacts: [
                 {
                 name: 'Michele',
@@ -166,13 +167,35 @@ createApp({
                 }
                 ],
                 }
-                ]
+                ],
         }
     },
     methods: {
-        test(){
-            console.log('card cliccata')
-            console.log(this.contacts[0].messages[1].message)
+        test(index){
+            console.log(index);
+            this.activeContact = index;
+        },
+        addMessage(){
+            console.log(this.newMessage)
+            this.contacts[this.activeContact].messages.push(
+                {
+                    message: this.newMessage,
+                    date: '10/07/2023 10:22:00',
+                    status: 'received'
+                });
+                
+            this.newMessage = '';
+
+            setTimeout(() => {
+                this.contacts[this.activeContact].messages.push(
+                    {
+                        message: 'ok',
+                        date: '10/07/2023 10:22:00',
+                        status: 'sent'
+                    });
+                    }, 1000);
+                console.log(this.contacts[this.activeContact].messages)
+
         }
     }
 }).mount('#app');

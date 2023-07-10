@@ -63,7 +63,7 @@
 
                     <section class="contact-list border white-bg">
 
-                        <div @click="test" class="contact-card flex-container" v-for="singleContact in contacts" >
+                        <div @click="test(i)" class="contact-card flex-container" v-for="(singleContact, i) in contacts" >
                             
                             <img  class="avatar" :src="singleContact.avatar" alt="">
                             
@@ -85,10 +85,10 @@
                     <header class="gray-bg flex-container">
 
                         <div class="col-6 flex-container">
-                            <img src="img/avatar_1.jpg" alt="" class="avatar">
-                            
+                            <img :src="contacts[activeContact].avatar" alt="" class="avatar">
+                            <!-- v-for="singleContact in contacts" -->
                             <span>
-                                <span class="text-bald">Michele</span>
+                                <span class="text-bald">{{contacts[activeContact].name}}</span>
                                 <div class="text-small">Ultimo accesso</div>
                             </span>
                         </div>
@@ -149,9 +149,12 @@
                             <i class="fa-regular fa-face-smile"></i>
                         </div>
                         <div class="col-10">
-                            <div class="text-small gray">
-                                Scrivi un messaggio
-                            </div>
+                            <input @keyup.enter="addMessage()"
+                            type="text" 
+                            class="text-small gray" 
+                            v-model="newMessage" 
+                            placeholder="scrivi un messaggio">
+
                         </div>
                         <div class="col-1 flex-container">
                             <i class="fa-solid fa-microphone"></i>
@@ -164,7 +167,6 @@
 
         </div>
         
-        <script src="js/functions.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>
