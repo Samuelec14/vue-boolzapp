@@ -28,6 +28,14 @@
     .col-1{
         width: calc((100% / 12) * 1);
     }
+    .col-2{
+        width: calc((100% / 12) * 2);
+        height: 100%;
+    }
+    .col-3{
+        width: calc((100% / 12) * 3);
+        height: 100%;
+    }
     .col-10{
         width: calc((100% / 12) * 10);
     }
@@ -44,6 +52,9 @@
     .col-6{
         width: calc((100% / 12) * 6);
         height: 100%;
+    }
+    .mt-2{
+        margin-top: 10px;
     }
     .flex-container{
         display: flex;
@@ -62,7 +73,7 @@
         background-color: rgb(243, 238, 234);
     }
     .avatar{
-        width: 13%;
+        width: 85%;
         border-radius: 50%;
     }
     i{
@@ -98,12 +109,27 @@
         bottom: 4px;
         font-size: 12px;
     }
+    .w-100{
+        width: 100%;
+    }
+    .h-100{
+        height: 100%;
+    }
+    .radius-rounded{
+        border-radius: 10px;
+    }
+    .p-2{
+        padding: 10px;
+    }
 
 
 /* LEFT ASIDE  navbar
 */  
     aside .navbar > div:first-child{
         height: 60px;
+        text-align:     right;
+        /* display: inline-block; */
+        line-height: 44px;
     }
     .background .container > .flex-container{
         flex-direction: column;
@@ -120,7 +146,7 @@
     }
     aside .navbar #io .avatar {
         margin-right: 15px;
-        width: 22%;
+        width: 40%;
     }
 
 
@@ -182,7 +208,7 @@
         padding: 8px 7px;
     }
     #r-aside header img{
-        width: 10%;
+        width: 12%;
         margin-right: 15px;
     }
     #r-aside header > div:last-child{
